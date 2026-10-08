@@ -1,0 +1,2380 @@
+{
+  "version": "1.0",
+  "description": "Real estate terminology taxonomy for MLS listing remarks (IDX Exchange NLP, Week 1)",
+  "categories": [
+    {
+      "id": "property_type",
+      "name": "Property Type",
+      "description": "Structure or ownership type of the listing"
+    },
+    {
+      "id": "rooms_layout",
+      "name": "Rooms & Layout",
+      "description": "Rooms, room counts, size, and floor plan"
+    },
+    {
+      "id": "kitchen",
+      "name": "Kitchen",
+      "description": "Kitchen features, finishes, and appliances"
+    },
+    {
+      "id": "interior_features",
+      "name": "Interior Features",
+      "description": "Flooring, ceilings, lighting, finishes, and fixtures"
+    },
+    {
+      "id": "exterior_outdoor",
+      "name": "Exterior, Lot & Parking",
+      "description": "Yard, outdoor amenities, lot characteristics, and parking"
+    },
+    {
+      "id": "systems_energy",
+      "name": "Systems & Energy",
+      "description": "HVAC, energy, plumbing, electrical, roof, and utilities"
+    },
+    {
+      "id": "location_community",
+      "name": "Location & Community",
+      "description": "Neighborhood, proximity, views, HOA, and community amenities"
+    },
+    {
+      "id": "condition_status",
+      "name": "Condition & Status",
+      "description": "Property condition, sale terms, and marketing language"
+    }
+  ],
+  "terms": [
+    {
+      "id": "PT_001",
+      "term": "single family home",
+      "category": "property_type",
+      "synonyms": [
+        "single-family",
+        "single family residence",
+        "sfr",
+        "detached home"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_002",
+      "term": "condo",
+      "category": "property_type",
+      "synonyms": [
+        "condominium",
+        "condos"
+      ],
+      "source": "ngram",
+      "sample_freq": 99
+    },
+    {
+      "id": "PT_003",
+      "term": "townhome",
+      "category": "property_type",
+      "synonyms": [
+        "townhouse",
+        "town home",
+        "townhomes"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_004",
+      "term": "duplex",
+      "category": "property_type",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_005",
+      "term": "triplex",
+      "category": "property_type",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_006",
+      "term": "fourplex",
+      "category": "property_type",
+      "synonyms": [
+        "4-plex",
+        "quadplex"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_007",
+      "term": "multi-family",
+      "category": "property_type",
+      "synonyms": [
+        "multifamily",
+        "multi-unit",
+        "income property"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_008",
+      "term": "adu",
+      "category": "property_type",
+      "synonyms": [
+        "accessory dwelling unit",
+        "granny flat"
+      ],
+      "source": "ngram",
+      "sample_freq": 121
+    },
+    {
+      "id": "PT_009",
+      "term": "guest house",
+      "category": "property_type",
+      "synonyms": [
+        "casita",
+        "guesthouse"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_010",
+      "term": "manufactured home",
+      "category": "property_type",
+      "synonyms": [
+        "mobile home",
+        "mobilehome"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_011",
+      "term": "single-story",
+      "category": "property_type",
+      "synonyms": [
+        "single story",
+        "one-story",
+        "single level",
+        "single-level"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_012",
+      "term": "two-story",
+      "category": "property_type",
+      "synonyms": [
+        "two story",
+        "2-story"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_013",
+      "term": "penthouse",
+      "category": "property_type",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_014",
+      "term": "estate",
+      "category": "property_type",
+      "synonyms": [
+        "estate home"
+      ],
+      "source": "ngram",
+      "sample_freq": 112
+    },
+    {
+      "id": "PT_015",
+      "term": "cottage",
+      "category": "property_type",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_016",
+      "term": "bungalow",
+      "category": "property_type",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_017",
+      "term": "craftsman",
+      "category": "property_type",
+      "synonyms": [
+        "craftsman-style",
+        "craftsman style"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_018",
+      "term": "mid-century modern",
+      "category": "property_type",
+      "synonyms": [
+        "mid century modern",
+        "mid-century",
+        "mcm"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_019",
+      "term": "spanish-style",
+      "category": "property_type",
+      "synonyms": [
+        "spanish style",
+        "mediterranean-style",
+        "mediterranean"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_020",
+      "term": "victorian",
+      "category": "property_type",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_021",
+      "term": "cabin",
+      "category": "property_type",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_022",
+      "term": "ranch-style",
+      "category": "property_type",
+      "synonyms": [
+        "ranch style",
+        "ranch home"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_023",
+      "term": "new construction",
+      "category": "property_type",
+      "synonyms": [
+        "newly built",
+        "newly constructed"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_024",
+      "term": "vacant land",
+      "category": "property_type",
+      "synonyms": [
+        "vacant lot",
+        "buildable lot"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_025",
+      "term": "co-op",
+      "category": "property_type",
+      "synonyms": [
+        "cooperative"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "PT_026",
+      "term": "horse property",
+      "category": "property_type",
+      "synonyms": [
+        "equestrian property",
+        "equestrian"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "RL_001",
+      "term": "primary suite",
+      "category": "rooms_layout",
+      "synonyms": [
+        "master suite",
+        "owner's suite",
+        "primary bedroom",
+        "master bedroom"
+      ],
+      "source": "ngram",
+      "sample_freq": 335
+    },
+    {
+      "id": "RL_002",
+      "term": "bedroom",
+      "category": "rooms_layout",
+      "synonyms": [
+        "bedrooms",
+        "br",
+        "bd",
+        "beds"
+      ],
+      "source": "ngram",
+      "sample_freq": 638
+    },
+    {
+      "id": "RL_003",
+      "term": "bathroom",
+      "category": "rooms_layout",
+      "synonyms": [
+        "bathrooms",
+        "bath",
+        "baths",
+        "ba"
+      ],
+      "source": "ngram",
+      "sample_freq": 488
+    },
+    {
+      "id": "RL_004",
+      "term": "full bathroom",
+      "category": "rooms_layout",
+      "synonyms": [
+        "full bath",
+        "full bathrooms",
+        "full baths"
+      ],
+      "source": "ngram",
+      "sample_freq": 100
+    },
+    {
+      "id": "RL_005",
+      "term": "half bath",
+      "category": "rooms_layout",
+      "synonyms": [
+        "powder room",
+        "half bathroom"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "RL_006",
+      "term": "walk-in closet",
+      "category": "rooms_layout",
+      "synonyms": [
+        "walk-in closets",
+        "walk in closet",
+        "wic"
+      ],
+      "source": "ngram",
+      "sample_freq": 199
+    },
+    {
+      "id": "RL_007",
+      "term": "living room",
+      "category": "rooms_layout",
+      "synonyms": [
+        "living area",
+        "formal living room",
+        "formal living"
+      ],
+      "source": "ngram",
+      "sample_freq": 310
+    },
+    {
+      "id": "RL_008",
+      "term": "family room",
+      "category": "rooms_layout",
+      "synonyms": [],
+      "source": "ngram",
+      "sample_freq": 164
+    },
+    {
+      "id": "RL_009",
+      "term": "great room",
+      "category": "rooms_layout",
+      "synonyms": [],
+      "source": "ngram",
+      "sample_freq": 71
+    },
+    {
+      "id": "RL_010",
+      "term": "dining room",
+      "category": "rooms_layout",
+      "synonyms": [
+        "dining area",
+        "formal dining room",
+        "formal dining"
+      ],
+      "source": "ngram",
+      "sample_freq": 178
+    },
+    {
+      "id": "RL_011",
+      "term": "home office",
+      "category": "rooms_layout",
+      "synonyms": [
+        "office",
+        "study",
+        "den"
+      ],
+      "source": "ngram",
+      "sample_freq": 289
+    },
+    {
+      "id": "RL_012",
+      "term": "bonus room",
+      "category": "rooms_layout",
+      "synonyms": [],
+      "source": "ngram",
+      "sample_freq": 55
+    },
+    {
+      "id": "RL_013",
+      "term": "loft",
+      "category": "rooms_layout",
+      "synonyms": [],
+      "source": "ngram",
+      "sample_freq": 108
+    },
+    {
+      "id": "RL_014",
+      "term": "media room",
+      "category": "rooms_layout",
+      "synonyms": [
+        "theater room",
+        "home theater"
+      ],
+      "source": "ngram",
+      "sample_freq": 41
+    },
+    {
+      "id": "RL_015",
+      "term": "game room",
+      "category": "rooms_layout",
+      "synonyms": [
+        "rec room",
+        "recreation room"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "RL_016",
+      "term": "laundry room",
+      "category": "rooms_layout",
+      "synonyms": [
+        "indoor laundry",
+        "laundry area",
+        "utility room",
+        "laundry"
+      ],
+      "source": "ngram",
+      "sample_freq": 299
+    },
+    {
+      "id": "RL_017",
+      "term": "mudroom",
+      "category": "rooms_layout",
+      "synonyms": [
+        "mud room"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "RL_018",
+      "term": "basement",
+      "category": "rooms_layout",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "RL_019",
+      "term": "open floor plan",
+      "category": "rooms_layout",
+      "synonyms": [
+        "open-concept",
+        "open concept",
+        "open layout",
+        "open-concept floor plan"
+      ],
+      "source": "ngram",
+      "sample_freq": 144
+    },
+    {
+      "id": "RL_020",
+      "term": "downstairs bedroom",
+      "category": "rooms_layout",
+      "synonyms": [
+        "main level bedroom",
+        "first floor bedroom",
+        "bedroom on the main level"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "RL_021",
+      "term": "en-suite",
+      "category": "rooms_layout",
+      "synonyms": [
+        "ensuite",
+        "en suite"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "RL_022",
+      "term": "jack and jill bathroom",
+      "category": "rooms_layout",
+      "synonyms": [
+        "jack-and-jill"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "RL_023",
+      "term": "guest suite",
+      "category": "rooms_layout",
+      "synonyms": [
+        "guest bedroom",
+        "guest quarters"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "RL_024",
+      "term": "home gym",
+      "category": "rooms_layout",
+      "synonyms": [
+        "exercise room",
+        "workout room"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "RL_025",
+      "term": "wine cellar",
+      "category": "rooms_layout",
+      "synonyms": [
+        "wine room"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "RL_026",
+      "term": "sunroom",
+      "category": "rooms_layout",
+      "synonyms": [
+        "sun room",
+        "florida room"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "RL_027",
+      "term": "square feet",
+      "category": "rooms_layout",
+      "synonyms": [
+        "sq ft",
+        "sqft",
+        "sq. ft.",
+        "sq ft.",
+        "square foot",
+        "sf"
+      ],
+      "source": "ngram",
+      "sample_freq": 169
+    },
+    {
+      "id": "RL_028",
+      "term": "multigenerational living",
+      "category": "rooms_layout",
+      "synonyms": [
+        "multi-generational living",
+        "multigenerational",
+        "multi-generational"
+      ],
+      "source": "ngram",
+      "sample_freq": 48
+    },
+    {
+      "id": "K_001",
+      "term": "kitchen",
+      "category": "kitchen",
+      "synonyms": [
+        "kitchens"
+      ],
+      "source": "ngram",
+      "sample_freq": 940
+    },
+    {
+      "id": "K_002",
+      "term": "kitchen island",
+      "category": "kitchen",
+      "synonyms": [
+        "center island",
+        "island"
+      ],
+      "source": "ngram",
+      "sample_freq": 180
+    },
+    {
+      "id": "K_003",
+      "term": "quartz countertops",
+      "category": "kitchen",
+      "synonyms": [
+        "quartz counters",
+        "quartz"
+      ],
+      "source": "ngram",
+      "sample_freq": 156
+    },
+    {
+      "id": "K_004",
+      "term": "granite countertops",
+      "category": "kitchen",
+      "synonyms": [
+        "granite counters",
+        "granite"
+      ],
+      "source": "ngram",
+      "sample_freq": 143
+    },
+    {
+      "id": "K_005",
+      "term": "stainless steel appliances",
+      "category": "kitchen",
+      "synonyms": [
+        "stainless appliances",
+        "ss appliances",
+        "stainless steel"
+      ],
+      "source": "ngram",
+      "sample_freq": 187
+    },
+    {
+      "id": "K_006",
+      "term": "gourmet kitchen",
+      "category": "kitchen",
+      "synonyms": [
+        "chef's kitchen",
+        "chefs kitchen"
+      ],
+      "source": "ngram",
+      "sample_freq": 49
+    },
+    {
+      "id": "K_007",
+      "term": "remodeled kitchen",
+      "category": "kitchen",
+      "synonyms": [
+        "updated kitchen",
+        "renovated kitchen",
+        "new kitchen"
+      ],
+      "source": "ngram",
+      "sample_freq": 54
+    },
+    {
+      "id": "K_008",
+      "term": "breakfast bar",
+      "category": "kitchen",
+      "synonyms": [
+        "breakfast counter"
+      ],
+      "source": "ngram",
+      "sample_freq": 49
+    },
+    {
+      "id": "K_009",
+      "term": "eat-in kitchen",
+      "category": "kitchen",
+      "synonyms": [
+        "eat in kitchen",
+        "breakfast nook",
+        "breakfast area"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "K_010",
+      "term": "pantry",
+      "category": "kitchen",
+      "synonyms": [
+        "walk-in pantry",
+        "butler's pantry"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "K_011",
+      "term": "custom cabinetry",
+      "category": "kitchen",
+      "synonyms": [
+        "custom cabinets",
+        "cabinetry"
+      ],
+      "source": "ngram",
+      "sample_freq": 284
+    },
+    {
+      "id": "K_012",
+      "term": "shaker cabinets",
+      "category": "kitchen",
+      "synonyms": [
+        "shaker-style cabinets"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "K_013",
+      "term": "soft-close cabinets",
+      "category": "kitchen",
+      "synonyms": [
+        "soft close",
+        "soft-close"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "K_014",
+      "term": "double oven",
+      "category": "kitchen",
+      "synonyms": [
+        "double ovens",
+        "dual ovens"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "K_015",
+      "term": "gas range",
+      "category": "kitchen",
+      "synonyms": [
+        "gas stove",
+        "gas cooktop"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "K_016",
+      "term": "built-in refrigerator",
+      "category": "kitchen",
+      "synonyms": [
+        "sub-zero",
+        "subzero"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "K_017",
+      "term": "wine fridge",
+      "category": "kitchen",
+      "synonyms": [
+        "wine cooler",
+        "beverage fridge",
+        "beverage center"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "K_018",
+      "term": "dishwasher",
+      "category": "kitchen",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "K_019",
+      "term": "microwave",
+      "category": "kitchen",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "K_020",
+      "term": "farmhouse sink",
+      "category": "kitchen",
+      "synonyms": [
+        "apron sink",
+        "apron-front sink"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "K_021",
+      "term": "backsplash",
+      "category": "kitchen",
+      "synonyms": [
+        "tile backsplash"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "K_022",
+      "term": "counter space",
+      "category": "kitchen",
+      "synonyms": [
+        "ample counter space",
+        "counterspace"
+      ],
+      "source": "ngram",
+      "sample_freq": 38
+    },
+    {
+      "id": "K_023",
+      "term": "pot filler",
+      "category": "kitchen",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "K_024",
+      "term": "butcher block",
+      "category": "kitchen",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "K_025",
+      "term": "wet bar",
+      "category": "kitchen",
+      "synonyms": [
+        "bar area"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "IF_001",
+      "term": "hardwood floors",
+      "category": "interior_features",
+      "synonyms": [
+        "hardwood flooring",
+        "wood floors",
+        "wood flooring",
+        "hardwood"
+      ],
+      "source": "ngram",
+      "sample_freq": 58
+    },
+    {
+      "id": "IF_002",
+      "term": "luxury vinyl plank",
+      "category": "interior_features",
+      "synonyms": [
+        "vinyl plank",
+        "lvp",
+        "luxury vinyl",
+        "vinyl plank flooring"
+      ],
+      "source": "ngram",
+      "sample_freq": 35
+    },
+    {
+      "id": "IF_003",
+      "term": "laminate flooring",
+      "category": "interior_features",
+      "synonyms": [
+        "laminate"
+      ],
+      "source": "ngram",
+      "sample_freq": 45
+    },
+    {
+      "id": "IF_004",
+      "term": "tile flooring",
+      "category": "interior_features",
+      "synonyms": [
+        "tile floors",
+        "tiled floors"
+      ],
+      "source": "ngram",
+      "sample_freq": 43
+    },
+    {
+      "id": "IF_005",
+      "term": "carpet",
+      "category": "interior_features",
+      "synonyms": [
+        "carpeting",
+        "new carpet"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "IF_006",
+      "term": "vaulted ceilings",
+      "category": "interior_features",
+      "synonyms": [
+        "cathedral ceilings",
+        "vaulted ceiling"
+      ],
+      "source": "ngram",
+      "sample_freq": 72
+    },
+    {
+      "id": "IF_007",
+      "term": "high ceilings",
+      "category": "interior_features",
+      "synonyms": [
+        "soaring ceilings",
+        "tall ceilings",
+        "high ceiling"
+      ],
+      "source": "ngram",
+      "sample_freq": 56
+    },
+    {
+      "id": "IF_008",
+      "term": "recessed lighting",
+      "category": "interior_features",
+      "synonyms": [
+        "can lights",
+        "recessed lights"
+      ],
+      "source": "ngram",
+      "sample_freq": 91
+    },
+    {
+      "id": "IF_009",
+      "term": "natural light",
+      "category": "interior_features",
+      "synonyms": [
+        "abundant natural light",
+        "light-filled",
+        "sun-drenched",
+        "sunlit"
+      ],
+      "source": "ngram",
+      "sample_freq": 266
+    },
+    {
+      "id": "IF_010",
+      "term": "fireplace",
+      "category": "interior_features",
+      "synonyms": [
+        "cozy fireplace",
+        "gas fireplace",
+        "wood-burning fireplace",
+        "fireplaces"
+      ],
+      "source": "ngram",
+      "sample_freq": 325
+    },
+    {
+      "id": "IF_011",
+      "term": "crown molding",
+      "category": "interior_features",
+      "synonyms": [
+        "crown moulding"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "IF_012",
+      "term": "ceiling fans",
+      "category": "interior_features",
+      "synonyms": [
+        "ceiling fan"
+      ],
+      "source": "ngram",
+      "sample_freq": 46
+    },
+    {
+      "id": "IF_013",
+      "term": "built-ins",
+      "category": "interior_features",
+      "synonyms": [
+        "built-in shelving",
+        "built-in shelves",
+        "built-in cabinets"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "IF_014",
+      "term": "french doors",
+      "category": "interior_features",
+      "synonyms": [],
+      "source": "ngram",
+      "sample_freq": 39
+    },
+    {
+      "id": "IF_015",
+      "term": "sliding glass doors",
+      "category": "interior_features",
+      "synonyms": [
+        "sliding doors",
+        "slider"
+      ],
+      "source": "ngram",
+      "sample_freq": 28
+    },
+    {
+      "id": "IF_016",
+      "term": "skylights",
+      "category": "interior_features",
+      "synonyms": [
+        "skylight"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "IF_017",
+      "term": "soaking tub",
+      "category": "interior_features",
+      "synonyms": [
+        "freestanding tub",
+        "soaking bathtub"
+      ],
+      "source": "ngram",
+      "sample_freq": 86
+    },
+    {
+      "id": "IF_018",
+      "term": "walk-in shower",
+      "category": "interior_features",
+      "synonyms": [
+        "walk in shower"
+      ],
+      "source": "ngram",
+      "sample_freq": 63
+    },
+    {
+      "id": "IF_019",
+      "term": "dual vanities",
+      "category": "interior_features",
+      "synonyms": [
+        "dual sinks",
+        "double vanity",
+        "double sinks",
+        "dual vanity"
+      ],
+      "source": "ngram",
+      "sample_freq": 56
+    },
+    {
+      "id": "IF_020",
+      "term": "barn doors",
+      "category": "interior_features",
+      "synonyms": [
+        "barn door"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "IF_021",
+      "term": "wainscoting",
+      "category": "interior_features",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "IF_022",
+      "term": "plantation shutters",
+      "category": "interior_features",
+      "synonyms": [
+        "shutters"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "IF_023",
+      "term": "smart home",
+      "category": "interior_features",
+      "synonyms": [
+        "smart home features",
+        "smart home technology"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "IF_024",
+      "term": "fresh paint",
+      "category": "interior_features",
+      "synonyms": [
+        "fresh interior paint",
+        "new paint",
+        "interior paint",
+        "freshly painted"
+      ],
+      "source": "ngram",
+      "sample_freq": 49
+    },
+    {
+      "id": "IF_025",
+      "term": "new flooring",
+      "category": "interior_features",
+      "synonyms": [
+        "new floors"
+      ],
+      "source": "ngram",
+      "sample_freq": 41
+    },
+    {
+      "id": "IF_026",
+      "term": "storage",
+      "category": "interior_features",
+      "synonyms": [
+        "additional storage",
+        "ample storage",
+        "storage space"
+      ],
+      "source": "ngram",
+      "sample_freq": 412
+    },
+    {
+      "id": "IF_027",
+      "term": "designer finishes",
+      "category": "interior_features",
+      "synonyms": [
+        "modern finishes",
+        "high-end finishes",
+        "upgraded finishes",
+        "luxury finishes"
+      ],
+      "source": "ngram",
+      "sample_freq": 34
+    },
+    {
+      "id": "IF_028",
+      "term": "washer and dryer",
+      "category": "interior_features",
+      "synonyms": [
+        "washer/dryer",
+        "in-unit laundry",
+        "washer dryer"
+      ],
+      "source": "ngram",
+      "sample_freq": 58
+    },
+    {
+      "id": "EO_001",
+      "term": "pool",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "swimming pool",
+        "sparkling pool",
+        "private pool",
+        "saltwater pool"
+      ],
+      "source": "ngram",
+      "sample_freq": 436
+    },
+    {
+      "id": "EO_002",
+      "term": "spa",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "hot tub",
+        "jacuzzi",
+        "pool and spa"
+      ],
+      "source": "ngram",
+      "sample_freq": 206
+    },
+    {
+      "id": "EO_003",
+      "term": "backyard",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "back yard",
+        "private backyard",
+        "rear yard",
+        "yard"
+      ],
+      "source": "ngram",
+      "sample_freq": 445
+    },
+    {
+      "id": "EO_004",
+      "term": "front yard",
+      "category": "exterior_outdoor",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "EO_005",
+      "term": "patio",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "covered patio",
+        "private patio"
+      ],
+      "source": "ngram",
+      "sample_freq": 309
+    },
+    {
+      "id": "EO_006",
+      "term": "deck",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "decks"
+      ],
+      "source": "ngram",
+      "sample_freq": 157
+    },
+    {
+      "id": "EO_007",
+      "term": "balcony",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "private balcony",
+        "balconies"
+      ],
+      "source": "ngram",
+      "sample_freq": 135
+    },
+    {
+      "id": "EO_008",
+      "term": "outdoor kitchen",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "built-in bbq",
+        "bbq area",
+        "built-in barbecue"
+      ],
+      "source": "ngram",
+      "sample_freq": 36
+    },
+    {
+      "id": "EO_009",
+      "term": "fire pit",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "firepit"
+      ],
+      "source": "ngram",
+      "sample_freq": 39
+    },
+    {
+      "id": "EO_010",
+      "term": "landscaping",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "mature landscaping",
+        "beautifully landscaped",
+        "drought-tolerant landscaping",
+        "landscaped"
+      ],
+      "source": "ngram",
+      "sample_freq": 133
+    },
+    {
+      "id": "EO_011",
+      "term": "fruit trees",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "mature fruit trees",
+        "citrus trees"
+      ],
+      "source": "ngram",
+      "sample_freq": 60
+    },
+    {
+      "id": "EO_012",
+      "term": "garden",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "raised garden beds",
+        "vegetable garden",
+        "garden beds"
+      ],
+      "source": "ngram",
+      "sample_freq": 112
+    },
+    {
+      "id": "EO_013",
+      "term": "lawn",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "grassy yard"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "EO_014",
+      "term": "corner lot",
+      "category": "exterior_outdoor",
+      "synonyms": [],
+      "source": "ngram",
+      "sample_freq": 48
+    },
+    {
+      "id": "EO_015",
+      "term": "cul-de-sac",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "cul de sac"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "EO_016",
+      "term": "large lot",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "oversized lot",
+        "spacious lot",
+        "generous lot"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "EO_017",
+      "term": "fenced yard",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "fully fenced",
+        "fenced backyard"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "EO_018",
+      "term": "curb appeal",
+      "category": "exterior_outdoor",
+      "synonyms": [],
+      "source": "ngram",
+      "sample_freq": 55
+    },
+    {
+      "id": "EO_019",
+      "term": "garage",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "garage parking"
+      ],
+      "source": "ngram",
+      "sample_freq": 533
+    },
+    {
+      "id": "EO_020",
+      "term": "parking",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "off-street parking",
+        "parking spaces",
+        "street parking"
+      ],
+      "source": "ngram",
+      "sample_freq": 334
+    },
+    {
+      "id": "EO_021",
+      "term": "rv parking",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "rv access",
+        "boat parking"
+      ],
+      "source": "ngram",
+      "sample_freq": 42
+    },
+    {
+      "id": "EO_022",
+      "term": "two-car garage",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "2-car garage",
+        "two car garage",
+        "2 car garage",
+        "attached two-car garage",
+        "attached 2-car garage"
+      ],
+      "source": "ngram",
+      "sample_freq": 77
+    },
+    {
+      "id": "EO_023",
+      "term": "three-car garage",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "3-car garage",
+        "three car garage",
+        "3 car garage"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "EO_024",
+      "term": "attached garage",
+      "category": "exterior_outdoor",
+      "synonyms": [],
+      "source": "ngram",
+      "sample_freq": 40
+    },
+    {
+      "id": "EO_025",
+      "term": "detached garage",
+      "category": "exterior_outdoor",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "EO_026",
+      "term": "driveway",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "long driveway",
+        "circular driveway"
+      ],
+      "source": "ngram",
+      "sample_freq": 117
+    },
+    {
+      "id": "EO_027",
+      "term": "carport",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "carports"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "EO_028",
+      "term": "ev charger",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "ev charging",
+        "electric vehicle charger",
+        "ev charging station"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "EO_029",
+      "term": "workshop",
+      "category": "exterior_outdoor",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "EO_030",
+      "term": "shed",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "storage shed"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "EO_031",
+      "term": "pergola",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "gazebo"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "EO_032",
+      "term": "porch",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "front porch",
+        "wrap-around porch"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "EO_033",
+      "term": "indoor-outdoor living",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "seamless indoor-outdoor",
+        "indoor/outdoor living"
+      ],
+      "source": "ngram",
+      "sample_freq": 61
+    },
+    {
+      "id": "EO_034",
+      "term": "outdoor living space",
+      "category": "exterior_outdoor",
+      "synonyms": [
+        "outdoor space",
+        "outdoor living",
+        "outdoor entertaining"
+      ],
+      "source": "ngram",
+      "sample_freq": 82
+    },
+    {
+      "id": "SE_001",
+      "term": "solar panels",
+      "category": "systems_energy",
+      "synonyms": [
+        "solar",
+        "owned solar",
+        "solar system",
+        "paid-off solar"
+      ],
+      "source": "ngram",
+      "sample_freq": 180
+    },
+    {
+      "id": "SE_002",
+      "term": "leased solar",
+      "category": "systems_energy",
+      "synonyms": [
+        "solar lease"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_003",
+      "term": "central air",
+      "category": "systems_energy",
+      "synonyms": [
+        "central ac",
+        "central a/c",
+        "air conditioning",
+        "hvac"
+      ],
+      "source": "ngram",
+      "sample_freq": 54
+    },
+    {
+      "id": "SE_004",
+      "term": "forced air heating",
+      "category": "systems_energy",
+      "synonyms": [
+        "central heat",
+        "central heating",
+        "forced air"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_005",
+      "term": "tankless water heater",
+      "category": "systems_energy",
+      "synonyms": [
+        "tankless"
+      ],
+      "source": "ngram",
+      "sample_freq": 32
+    },
+    {
+      "id": "SE_006",
+      "term": "water heater",
+      "category": "systems_energy",
+      "synonyms": [
+        "new water heater"
+      ],
+      "source": "ngram",
+      "sample_freq": 64
+    },
+    {
+      "id": "SE_007",
+      "term": "dual-pane windows",
+      "category": "systems_energy",
+      "synonyms": [
+        "double-pane windows",
+        "dual pane windows",
+        "energy-efficient windows"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_008",
+      "term": "new roof",
+      "category": "systems_energy",
+      "synonyms": [
+        "newer roof",
+        "roof replaced"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_009",
+      "term": "tile roof",
+      "category": "systems_energy",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_010",
+      "term": "copper plumbing",
+      "category": "systems_energy",
+      "synonyms": [
+        "repiped",
+        "new plumbing"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_011",
+      "term": "upgraded electrical",
+      "category": "systems_energy",
+      "synonyms": [
+        "new electrical panel",
+        "200 amp",
+        "electrical panel"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_012",
+      "term": "smart thermostat",
+      "category": "systems_energy",
+      "synonyms": [
+        "nest thermostat"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_013",
+      "term": "water softener",
+      "category": "systems_energy",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_014",
+      "term": "whole-house fan",
+      "category": "systems_energy",
+      "synonyms": [
+        "whole house fan"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_015",
+      "term": "mini-split",
+      "category": "systems_energy",
+      "synonyms": [
+        "mini split",
+        "ductless"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_016",
+      "term": "septic system",
+      "category": "systems_energy",
+      "synonyms": [
+        "septic"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_017",
+      "term": "well water",
+      "category": "systems_energy",
+      "synonyms": [
+        "private well"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_018",
+      "term": "city sewer",
+      "category": "systems_energy",
+      "synonyms": [
+        "public sewer"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_019",
+      "term": "security system",
+      "category": "systems_energy",
+      "synonyms": [
+        "alarm system",
+        "security cameras"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_020",
+      "term": "generator",
+      "category": "systems_energy",
+      "synonyms": [
+        "backup generator"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_021",
+      "term": "energy efficient",
+      "category": "systems_energy",
+      "synonyms": [
+        "energy-efficient",
+        "energy efficiency"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "SE_022",
+      "term": "irrigation system",
+      "category": "systems_energy",
+      "synonyms": [
+        "sprinkler system",
+        "drip irrigation",
+        "sprinklers"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "LC_001",
+      "term": "gated community",
+      "category": "location_community",
+      "synonyms": [
+        "gated"
+      ],
+      "source": "ngram",
+      "sample_freq": 168
+    },
+    {
+      "id": "LC_002",
+      "term": "hoa",
+      "category": "location_community",
+      "synonyms": [
+        "homeowners association",
+        "hoa fees",
+        "hoa dues"
+      ],
+      "source": "ngram",
+      "sample_freq": 154
+    },
+    {
+      "id": "LC_003",
+      "term": "no hoa",
+      "category": "location_community",
+      "synonyms": [
+        "no hoa fees"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "LC_004",
+      "term": "community pool",
+      "category": "location_community",
+      "synonyms": [],
+      "source": "ngram",
+      "sample_freq": 37
+    },
+    {
+      "id": "LC_005",
+      "term": "clubhouse",
+      "category": "location_community",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "LC_006",
+      "term": "fitness center",
+      "category": "location_community",
+      "synonyms": [
+        "community gym"
+      ],
+      "source": "ngram",
+      "sample_freq": 61
+    },
+    {
+      "id": "LC_007",
+      "term": "tennis courts",
+      "category": "location_community",
+      "synonyms": [
+        "tennis court"
+      ],
+      "source": "ngram",
+      "sample_freq": 51
+    },
+    {
+      "id": "LC_008",
+      "term": "pickleball courts",
+      "category": "location_community",
+      "synonyms": [
+        "pickleball"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "LC_009",
+      "term": "golf course",
+      "category": "location_community",
+      "synonyms": [
+        "golf"
+      ],
+      "source": "ngram",
+      "sample_freq": 161
+    },
+    {
+      "id": "LC_010",
+      "term": "trails",
+      "category": "location_community",
+      "synonyms": [
+        "walking trails",
+        "hiking trails",
+        "hiking"
+      ],
+      "source": "ngram",
+      "sample_freq": 109
+    },
+    {
+      "id": "LC_011",
+      "term": "parks",
+      "category": "location_community",
+      "synonyms": [
+        "park",
+        "nearby parks"
+      ],
+      "source": "ngram",
+      "sample_freq": 276
+    },
+    {
+      "id": "LC_012",
+      "term": "top-rated schools",
+      "category": "location_community",
+      "synonyms": [
+        "school district",
+        "great schools",
+        "award-winning schools",
+        "schools"
+      ],
+      "source": "ngram",
+      "sample_freq": 188
+    },
+    {
+      "id": "LC_013",
+      "term": "walking distance",
+      "category": "location_community",
+      "synonyms": [
+        "walkable",
+        "within walking distance"
+      ],
+      "source": "ngram",
+      "sample_freq": 45
+    },
+    {
+      "id": "LC_014",
+      "term": "close to shopping",
+      "category": "location_community",
+      "synonyms": [
+        "near shopping",
+        "shopping and dining",
+        "shopping"
+      ],
+      "source": "ngram",
+      "sample_freq": 392
+    },
+    {
+      "id": "LC_015",
+      "term": "restaurants",
+      "category": "location_community",
+      "synonyms": [
+        "dining options"
+      ],
+      "source": "ngram",
+      "sample_freq": 146
+    },
+    {
+      "id": "LC_016",
+      "term": "freeway access",
+      "category": "location_community",
+      "synonyms": [
+        "easy freeway access",
+        "major freeways",
+        "freeways",
+        "close to freeways"
+      ],
+      "source": "ngram",
+      "sample_freq": 106
+    },
+    {
+      "id": "LC_017",
+      "term": "downtown",
+      "category": "location_community",
+      "synonyms": [],
+      "source": "ngram",
+      "sample_freq": 164
+    },
+    {
+      "id": "LC_018",
+      "term": "public transportation",
+      "category": "location_community",
+      "synonyms": [
+        "public transit",
+        "metro"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "LC_019",
+      "term": "beach",
+      "category": "location_community",
+      "synonyms": [
+        "beaches",
+        "near the beach"
+      ],
+      "source": "ngram",
+      "sample_freq": 134
+    },
+    {
+      "id": "LC_020",
+      "term": "ocean views",
+      "category": "location_community",
+      "synonyms": [
+        "ocean view"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "LC_021",
+      "term": "mountain views",
+      "category": "location_community",
+      "synonyms": [
+        "mountain view"
+      ],
+      "source": "ngram",
+      "sample_freq": 71
+    },
+    {
+      "id": "LC_022",
+      "term": "city lights views",
+      "category": "location_community",
+      "synonyms": [
+        "city views",
+        "city lights"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "LC_023",
+      "term": "panoramic views",
+      "category": "location_community",
+      "synonyms": [
+        "sweeping views",
+        "views"
+      ],
+      "source": "ngram",
+      "sample_freq": 542
+    },
+    {
+      "id": "LC_024",
+      "term": "lake",
+      "category": "location_community",
+      "synonyms": [
+        "lakefront",
+        "lake views"
+      ],
+      "source": "ngram",
+      "sample_freq": 202
+    },
+    {
+      "id": "LC_025",
+      "term": "waterfront",
+      "category": "location_community",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "LC_026",
+      "term": "quiet neighborhood",
+      "category": "location_community",
+      "synonyms": [
+        "quiet street",
+        "peaceful neighborhood"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "LC_027",
+      "term": "55+ community",
+      "category": "location_community",
+      "synonyms": [
+        "senior community",
+        "active adult community"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "LC_028",
+      "term": "resort-style amenities",
+      "category": "location_community",
+      "synonyms": [
+        "resort-style"
+      ],
+      "source": "ngram",
+      "sample_freq": 123
+    },
+    {
+      "id": "LC_029",
+      "term": "playground",
+      "category": "location_community",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "LC_030",
+      "term": "dog park",
+      "category": "location_community",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "CS_001",
+      "term": "move-in ready",
+      "category": "condition_status",
+      "synonyms": [
+        "move in ready",
+        "turnkey",
+        "turn-key",
+        "turn key"
+      ],
+      "source": "ngram",
+      "sample_freq": 112
+    },
+    {
+      "id": "CS_002",
+      "term": "fixer-upper",
+      "category": "condition_status",
+      "synonyms": [
+        "fixer",
+        "needs tlc",
+        "handyman special",
+        "investor special"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "CS_003",
+      "term": "remodeled",
+      "category": "condition_status",
+      "synonyms": [
+        "newly remodeled",
+        "renovated",
+        "fully renovated",
+        "beautifully remodeled"
+      ],
+      "source": "ngram",
+      "sample_freq": 189
+    },
+    {
+      "id": "CS_004",
+      "term": "updated",
+      "category": "condition_status",
+      "synonyms": [
+        "beautifully updated",
+        "upgraded",
+        "upgrades"
+      ],
+      "source": "ngram",
+      "sample_freq": 359
+    },
+    {
+      "id": "CS_005",
+      "term": "well-maintained",
+      "category": "condition_status",
+      "synonyms": [
+        "beautifully maintained",
+        "meticulously maintained",
+        "pride of ownership"
+      ],
+      "source": "ngram",
+      "sample_freq": 84
+    },
+    {
+      "id": "CS_006",
+      "term": "brand new",
+      "category": "condition_status",
+      "synonyms": [],
+      "source": "ngram",
+      "sample_freq": 56
+    },
+    {
+      "id": "CS_007",
+      "term": "rare opportunity",
+      "category": "condition_status",
+      "synonyms": [
+        "rare find",
+        "exceptional opportunity",
+        "don't miss"
+      ],
+      "source": "ngram",
+      "sample_freq": 126
+    },
+    {
+      "id": "CS_008",
+      "term": "price reduced",
+      "category": "condition_status",
+      "synonyms": [
+        "price reduction",
+        "new price",
+        "reduced price"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "CS_009",
+      "term": "motivated seller",
+      "category": "condition_status",
+      "synonyms": [
+        "seller motivated"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "CS_010",
+      "term": "as-is",
+      "category": "condition_status",
+      "synonyms": [
+        "as is",
+        "sold as-is"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "CS_011",
+      "term": "investment opportunity",
+      "category": "condition_status",
+      "synonyms": [
+        "investment property",
+        "investors"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "CS_012",
+      "term": "rental income",
+      "category": "condition_status",
+      "synonyms": [
+        "income potential",
+        "rental potential",
+        "income-producing"
+      ],
+      "source": "ngram",
+      "sample_freq": 47
+    },
+    {
+      "id": "CS_013",
+      "term": "short sale",
+      "category": "condition_status",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "CS_014",
+      "term": "probate",
+      "category": "condition_status",
+      "synonyms": [
+        "trust sale"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "CS_015",
+      "term": "bank-owned",
+      "category": "condition_status",
+      "synonyms": [
+        "reo",
+        "foreclosure"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "CS_016",
+      "term": "tenant-occupied",
+      "category": "condition_status",
+      "synonyms": [
+        "tenant occupied"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "CS_017",
+      "term": "vacant",
+      "category": "condition_status",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "CS_018",
+      "term": "open house",
+      "category": "condition_status",
+      "synonyms": [],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "CS_019",
+      "term": "highly desirable",
+      "category": "condition_status",
+      "synonyms": [
+        "sought-after",
+        "highly sought-after",
+        "desirable"
+      ],
+      "source": "ngram",
+      "sample_freq": 275
+    },
+    {
+      "id": "CS_020",
+      "term": "first-time buyer",
+      "category": "condition_status",
+      "synonyms": [
+        "first time buyer",
+        "first-time homebuyer",
+        "starter home"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "CS_021",
+      "term": "buyer to verify",
+      "category": "condition_status",
+      "synonyms": [],
+      "source": "ngram",
+      "sample_freq": 22
+    },
+    {
+      "id": "CS_022",
+      "term": "seller financing",
+      "category": "condition_status",
+      "synonyms": [
+        "owner will carry"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "CS_023",
+      "term": "assumable loan",
+      "category": "condition_status",
+      "synonyms": [
+        "assumable"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "CS_024",
+      "term": "development potential",
+      "category": "condition_status",
+      "synonyms": [
+        "adu potential",
+        "lot split"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    },
+    {
+      "id": "CS_025",
+      "term": "value-add",
+      "category": "condition_status",
+      "synonyms": [
+        "value add"
+      ],
+      "source": "domain",
+      "sample_freq": 0
+    }
+  ]
+}
