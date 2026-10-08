@@ -52,3 +52,22 @@ def test_taxonomy_coverage(tax, df):
     coverage = hits.mean()
     print(f"\nTaxonomy coverage: {coverage:.1%}")
     assert coverage >= 0.30
+
+#Week 1 Evaluate Queries and check every feature entity exists in taxonomy.json
+import pandas
+import pytest
+import json
+
+def test_queries_labeled():
+    q = pd.read_csv("data/processed/queries.csv")
+    assert len(q) >= 50
+    assert q["intent"].notna().all()
+    assert q["intent"].nunique() >= 5
+
+
+def test_query_features_in_taxonomy(tax):
+    q = pd.read_csv("data/processed/queries.csv")
+    terms = {t["term"] for t in tax["terms"]}
+    for ents in q["entities"].map(json.loads):
+        for f in ents.get("features", []):
+            assert f in terms, f"'{f}' not in taxonomy"
