@@ -14,7 +14,12 @@ data/raw/*
 data/processed/*
 data/models/*
 !data/**/.gitkeep
- 
+# Exceptions: "!" un-ignores files that data/processed/* (line 14) ignores.
+# Must come AFTER the rule they override. No leading/trailing spaces!
+!data/processed/listing_sample.csv
+!data/processed/taxonomy.json
+!data/processed/queries.csv
+
 # OS / editor
 .DS_Store
 .vscode/
